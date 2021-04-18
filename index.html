@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="Logo.ico">
+	<link rel="stylesheet" href="D:\Fake News Detection\static\main.css" />
+	<title>Fake Tweet Identifier</title>
+</head>
+<body style="background-image: linear-gradient(to bottom right, darkturquoise, lightskyblue)">
+
+
+<div id="Header" style="
+	background-image: linear-gradient(to bottom right,turquoise, rgb(102,164,69));
+	color:white;">
+
+	<marquee><h1>Welcome to Fake Tweet Identifier</h1></marquee>
+</div>
+
+
+
+<div id="Section" style="width: 700px;
+	height:400px;
+	position: absolute;
+	top:200px;
+	background: white;
+	font-family: Malgun Gothic;
+border-radius: 10px;
+
+
+background-image: linear-gradient(to bottom right,white,peachpuff);
+padding: 5px;">
+<h2>About Project</h2>
+<hr>
+<p>Spam tweets are one of the biggest issues in the world of internet. Spam tweets not only influence the organisations financially but also exasperate the individual user. Spam emails, also known as non-self, are unsolicited commercial emails or fraudulent emails sent to a particular individual or company, or to a group of individuals. The area of spam filtering commonly uses machine learning algorithms. A lot of effort has always been put into to render spam filtering more efficient in classifying tweets and messages as either ham (valid messages) or spam (unwanted messages) through the ML classifiers.We may recognize the distinguishing features of the material of documents. Much important work has been carried out in the area of spam filtering which cannot be adapted to various conditions and problems which are limited to certain domains. Our analysis mainly highlights and focuses on the positives methods as well as some shortcomings of current ML methods and open spam filters study challenges. We suggest some of the new ongoing approaches towards deep leaning as potential tactics that can tackle the challenge of spam tweets efficiently. </p>	
+</div>
+
+
+
+
+
+
+
+<div class="login" style="border:2px #ff0000 solid;
+						  height:400px;
+						  width:auto;
+	position: absolute;
+	left:730px;
+	top:200px;
+	border-radius: 10px;
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(168,142,22,1) 0%, rgba(0,212,255,1) 100%);">
+	<h1>Fake Tweet📰  Detector</h1>
+
+    <form action="{{ url_for('predict')}}" method="POST">
+    	<textarea  name="message" rows="4" cols="50" required="required" style="font-size: 18pt;" placeholder="Enter your tweet here."></textarea>
+		<br> </br>
+        &nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary btn-block btn-large" style="font-size: 18px;padding: 10px 24px;background-color: #008CBA;color:white;">Predict</button>
+
+        	<div class="results">
+
+				{% if prediction == ['FAKE']%}
+				<h2 style="color:red;">Looking Spam⚠️News📰 </h2>
+				{% elif prediction == ['REAL']%}
+				<h2 style="color:green;"><b>Looking Real News📰</b></h2>
+			{% endif %}
+
+			</div>
+
+    </form>
+
+</div>
+
+
+
+
+
+
+
+<div id="Footer1" style="position:absolute;
+							top:610px;
+							height:300px;
+							width:100%;
+
+text-align: center;
+							border:2px green dotted;">
+	<h2>About Us</h2>
+<br>
+	<div style="border:1px black solid;
+height: 150px;
+width: 150px;
+text-align: center;
+position:absolute;
+top:60px;
+left:570px;
+font-size: 20px;
+background-image: linear-gradient(to bottom right,white,teal);
+" >Fiza Patel<br><br><b>Branch:</b>IT<br><b><br>SCET-SY-166<br>MITAOE, Alandi</b>
+	</div>
+	<div style="border:1px black solid;
+
+background-image: linear-gradient(to bottom right,white,teal);
+height: 150px;
+font-size: 20px;
+width: 150px;
+text-align: center;
+position:absolute;
+top:60px;
+left:400px;" >Aditya Bedre<br><br><b>Branch:</b>Computer<br><br><b>SCET-SY-090<br>MITAOE, Alandi</b>
+	</div>
+	<div style="border:1px black solid;
+
+background-image: linear-gradient(to bottom right,white,teal);
+height: 150px;
+width: 150px;
+font-size: 20px;
+text-align: center;
+position:absolute;
+top:60px;
+left:740px;
+" >Ajinkya Mahure<br><br><b>Branch:</b>IT<br><b><br>SCET-SY-213<br>MITAOE, Alandi</b>
+	</div>
+	<div style="border:1px black solid;
+height: 150px;
+
+background-image: linear-gradient(to bottom right,teal,white);
+width: 150px;
+font-size: 20px;
+text-align: center;
+position:absolute;
+top:60px;
+left:910px;
+" >Guide:<br><b>Kavitha Nair Ma'am</b><br><b><br>SCET<br>MITAOE, Alandi</b>
+	</div>
+	<br><br><br><br><br><br><br><br><br><h2>Your feedback is precious to us. Mail us at:<a href="mailto:ajinkyamahure3@gmail.com">@ajinkyamahure3@gmail.com</a></h2>
+</div>
+</body>
+</html>

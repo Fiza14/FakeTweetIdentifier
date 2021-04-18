@@ -1,0 +1,32 @@
+div{
+	text-align: center;
+	border: 2px white solid;
+	font-family: Malgun Gothic;
+}
+#Logo {
+	transform: rotateY(720000deg);
+	transition-duration:3600s;
+	animation-iteration-count: infinite;
+}
+#Header{
+	background-image: linear-gradient(to bottom right,turquoise, rgb(102,164,69));
+	color:white;
+}
+
+#Section {
+	width: 700px;
+	height:400px;
+	position: absolute;
+	top:200px;
+	background: white;
+	font-family: Malgun Gothic;
+}
+#Aside {
+	width:800px;
+	height: 400px;
+	position: absolute;
+	left:710px;
+	top:200px;
+	background: white;
+}
+
